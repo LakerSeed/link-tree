@@ -4,3 +4,107 @@
     text-decoration: none;
     list-style: none;
 }
+:root{
+    --text-color: #ffffff;
+    --background-color: #141414;
+    --container-color: #1f1f1f;
+    --link-color: #333333;
+    --border: none;
+    --icon: #ffffff;
+    --icon-bg: #333333;
+}
+.ligth{
+    --text-color:#000000;
+    --background-color: #ebebeb;
+    --container-color: #ffffff;
+    --link-color: transparent;
+    --border: #333333;
+    --icon: #ffffff;
+    --icon-bg: #333333;
+}
+body{
+    height: 100dvh;
+    background-color: var(--background-color);
+}
+p,a{
+    color: var(--text-color);
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+#container{
+    position: relative;
+    background-color: var(--container-color);
+    width: 25%;
+    height: 600px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 1rem;
+}
+#profile{
+    text-align: center;
+    font-family: "Inter", sans-serif;
+}
+#profile img{
+    padding: 2rem;
+    border-radius: 50%;
+    height: 4rem;
+}
+#profile h1{
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 22px;
+}
+#profile p{
+    padding-bottom: 1rem;
+}
+.subTitle{
+    color: #c5f82a;
+    padding-top: .5rem;
+    padding-bottom: 1.5rem;
+}
+#links{
+    width: 100%;
+}
+#links ul{
+    margin: auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: auto;
+}
+.item{
+    width: 100%;
+    height: auto;
+}
+.item button{
+    width: 100%;
+    height: 40px;
+    border: 1px solid var(--border);
+    border-radius: .5rem;
+    background-color: var(--link-color);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s;
+    cursor: pointer;
+}
+#links button:hover{
+    transform: scale(1.05);
+}
+#theme_switch{
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 50%;
+    color: var(--icon);
+    background-color: var(--icon-bg);
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.5s cubic-bezier(.78,-0.78,.34,1.74);
+}
+#theme_switch ion-icon{
+    transform: scale(2.5);
+}
