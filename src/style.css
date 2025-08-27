@@ -8,19 +8,25 @@
     --text-color: #ffffff;
     --background-color: #141414;
     --container-color: #1f1f1f;
+    --subtilte-color:#c5f82a;
     --link-color: #333333;
     --border: none;
     --icon: #ffffff;
     --icon-bg: #333333;
+    --moon-opacity: 0;
+    --sun-opacity: 1;
 }
 .light{
     --text-color:#000000;
     --background-color: #ebebeb;
     --container-color: #ffffff;
+    --subtilte-color:#2dd228;
     --link-color: transparent;
     --border: #333333;
     --icon: #ffffff;
     --icon-bg: #333333;
+    --moon-opacity: 1;
+    --sun-opacity: 0;
 }
 body{
     height: 100dvh;
@@ -38,6 +44,7 @@ p,a{
     width: 25%;
     height: 600px;
     left: 50%;
+    top: 10%;
     transform: translateX(-50%);
     border-radius: 1rem;
 }
@@ -59,7 +66,7 @@ p,a{
     padding-bottom: 1rem;
 }
 .subTitle{
-    color: #c5f82a;
+    color: var(--subtilte-color);
     padding-top: .5rem;
     padding-bottom: 1.5rem;
 }
@@ -93,22 +100,26 @@ p,a{
 #links button:hover{
     transform: scale(1.05);
 }
-#theme_switchbtn{
+#theme, #sun, #moon, #icon_bg{
     height: 50px;
     width: 50px;
-    border: none;
-    border-radius: 50%;
-    color: var(--icon);
-    background-color: var(--icon-bg);
     position: absolute;
     right: 10px;
     bottom: 10px;
     cursor: pointer;
-    transition: transform 0.5s cubic-bezier(.78,-0.78,.34,1.74), background-color 0.3s ease;
 }
-#theme_switchbtn:hover{
-    background-color: #c5f82a;
+#sun{
+    opacity: var(--sun-opacity);
+    color: #ffffff;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
 }
-#theme_switchbtn ion-icon{
-    transform: scale(2.5);
+#moon{
+    opacity: var(--moon-opacity);
+    border: 3px solid #000000;
+    border-radius: 50%;
+}
+#theme{
+    z-index: 1;
+    opacity: 0;
 }

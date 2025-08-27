@@ -18,17 +18,18 @@
         </div>
         <div id="links">
             <ul>
-                <li class="item"><button>GitHub</button></li>
-                <li class="item"><button>Frontend Mentor</button></li>
-                <li class="item"><button>LinkedIn</button></li>
-                <li class="item"><button>Twitter</button></li>
-                <li class="item"><button>Instagram</button></li>
+                <li class="item"><button onclick="gotolink(this)" value="https://www.github.com">GitHub</button></li>
+                <li class="item"><button onclick="gotolink(this)" value="https:www.frontendmentor.io//">Frontend Mentor</button></li>
+                <li class="item"><button onclick="gotolink(this)" value="https:www.linkedin.com//">LinkedIn</button></li>
+                <li class="item"><button onclick="gotolink(this)" value="https://www.twitter.com">Twitter</button></li>
+                <li class="item"><button onclick="gotolink(this)" value="https://www.instagram.com">Instagram</button></li>
             </ul>
         </div>
     </div>
-    <div>
-        <input id="theme" type="checkbox" name="" id="theme_switch">
-        <ion-icon name="sunny"></ion-icon>
+    <div id="icon_bg">
+        <input id="theme" type="checkbox" name="">
+        <ion-icon id="sun" name="sunny"></ion-icon>
+        <ion-icon id="moon" name="moon"></ion-icon>
     </div>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="index.js"></script>
