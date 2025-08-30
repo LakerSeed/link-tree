@@ -12,7 +12,7 @@ theme_switch.addEventListener("change",function myfunction(){
 let address
 
 // this function show the modal and assing a value to adress
-function gotolink(link){
+function goToLink(link){
     //reset the animation
     modal.classList.remove('disappear')
     modal.classList.add('appear')
