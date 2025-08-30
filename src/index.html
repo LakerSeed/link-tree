@@ -8,7 +8,7 @@
     <title>Árvore de links</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="light">
+<body>
     <div id="container">
         <div id="profile">
             <img src="/docs/images/avatar-jessica.jpeg" alt="photo">
@@ -32,9 +32,9 @@
         <ion-icon id="moon" name="moon"></ion-icon>
     </div>
     <div id="modal">
-        <p>Você será redirecionado para outro site</p>
-        <button class="button" id="confirm">Confirmar</button>
-        <button class="button" id="refuse">Recusar</button>
+        <h3>Você será redirecionado para outro site, deseja continuar?</h3>
+        <button class="button" id="confirm" value="open" onclick="confirm(this)">Confirmar</button>
+        <button class="button" id="refuse" onclick="confirm(this)">Recusar</button>
     </div>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="index.js"></script>

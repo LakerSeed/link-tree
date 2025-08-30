@@ -32,7 +32,7 @@ body{
     height: 100dvh;
     background-color: var(--background-color);
 }
-p,a{
+p,a,h3{
     color: var(--text-color);
     font-family: "Inter", sans-serif;
     font-size: 14px;
@@ -94,7 +94,7 @@ p,a{
     background-color: var(--link-color);
     padding: 1rem;
     text-align: center;
-    transition: transform 0.3s, background-color 0.3s;
+    transition: transform 0.3s;
     cursor: pointer;
 }
 #links button:hover{
@@ -136,20 +136,41 @@ p,a{
     backdrop-filter: blur(5px);
     text-align: center;
     padding: 2rem;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
-#modal p{
+.appear{
+    animation: appear 0.5s;
+}
+.disappear{
+    animation: disappear 0.5s;
+}
+@keyframes appear {
+    from {top: 100vh}
+    to {top: 30%;}
+}
+@keyframes disappear {
+    from {top: 30%}
+    to {top: 100vh}
+}
+#modal h3{
     order: 1;
     width: 100%;
+    position: none;
+    font-size: 20px;
+    font-weight: 600;
 }
 .button{
     height: 50px;
     width: 40%;
     order: 2;
     border-radius: 10px;
-    border: none;
-    ba
+    border: 1px solid #000000;
+    margin: 5px;
+    transition: transform 0.3s;
+}
+.button:hover{
+    transform: scale(1.05);
 }
